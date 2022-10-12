@@ -16,5 +16,5 @@ Example implementation of discussions.js
 
 ## Background
 
-Please refer to [this blog post](https://berk.es/...) for background and
+Please refer to [this blog post](https://berk.es/2022/10/12/blog-comments-on-a-static-site-via-social-networks/) for background and
 use-cases.
