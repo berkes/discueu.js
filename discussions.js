@@ -51,6 +51,9 @@ class discussionsRepo {
 
 class templateRenderer {
   constructor() {
+    // TODO: decide if we should not rather inject either the IDs or the
+    // entire elements. Because this adds coupling to the HTML in a place
+    // that shouldn't know this much about that HTML.
     this.commentTemplate = document.getElementById('comment-line').content;
     this.loadingTemplate = document.getElementById('comment-loading').content;
     this.emptyTemplate = document.getElementById('comment-empty').content;
