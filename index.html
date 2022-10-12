@@ -59,6 +59,19 @@
   </section>
 
   <script defer src="discussions.js"></script>
+  <script>
+    window.addEventListener('load', function(_event) {
+      let discussionsUrl = new URL(document.getElementById("comment").dataset.discussionUrl);
+      let networks = {
+        'r': 'Reddit',
+        'h': 'Hacker News',
+        'l': 'Lobste.rs',
+      };
+      let repo = new discussionsRepo(discussionsUrl, networks);
+      let renderer = new templateRenderer();
+      new Discussions(repo, renderer).maybeHandle();
+    }); 
+  </script>
 
   <template id="comment-line">
     <li class="comment-line">
