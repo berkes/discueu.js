@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>discueu.js Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="hero is-primary column is-half is-offset-one-quarter">
+    <div class="hero-body">
+      <h1 class="title">
+        discueu.js Example
+      </h1>
+      <p class="subtitle">
+      A blog without a backend.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container column is-half is-offset-one-quarter">
+      <h2 class="title">
+        Things You Should Never Do, Part I
+      </h2>
+      <div class="block has-background-light p-4">
+        <p><em>7 juni 2022</em> by <em>John Doe</em></p>
+        <p>In <em>CEO</em> and <em>News</em></p>
+      </div>
+      <div class="block content">
+        <p>
+          <strong>To show off the discussion feature, I picked a popular blog post by Joel Spolsky.</strong></br>
+          So let's pretend you are reading this page on the URL <em>https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/</em>
+          </strong>
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum at
+          tempor commodo ullamcorper a lacus vestibulum. Et ligula ullamcorper
+          malesuada proin libero nunc consequat interdum. Praesent semper
+        </p>
+        <p>
+          Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Gravida
+          rutrum quisque non tellus orci. Fringilla phasellus faucibus scelerisque
+          eleifend donec pretium vulputate sapien. Nisl vel pretium lectus quam. Diam
+          maecenas sed enim ut sem viverra aliquet.
+        </p>
+      </div>
+      <div class="block content has-background-light p-4">
+        <strong>Discussions around the web:</strong>
+
+        <div id="comment" data-discussion-url="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i">
+          <ul></ul>
+        </div>
+
+        <p class="pt-2">Powered by <a href="https://discu.eu">discu.eu</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <script defer src="discussions.js"></script>
+
+  <template id="comment-line">
+    <li class="comment-line">
+      <a href=""><span class="platform"></span> (<span class="count"></span> comments)</a>
+    </li>
+  </template>
+
+  <template id="comment-loading">
+    <p class="loading">
+      Looking up discussions on social networks...
+    </p>
+  </template>
+
+  <template id="comment-empty">
+    <p class="empty">
+      Article is not submitted to Reddit, Lobste.rs or Hacker News.
+    </p>
+  </template>
+
+  <template id="comment-error">
+    <p class="is-error">
+      An error occurred while loading the discussions.
+    </p>
+  </template>
+  </body>
+</html>
